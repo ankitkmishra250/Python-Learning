@@ -1,7 +1,7 @@
 #f-strings
 name = "Ankit";
 age = 23;
-
+print(len(name));
 print(f"My Name is {name} and i am {age} years old ");
 
 #format()
