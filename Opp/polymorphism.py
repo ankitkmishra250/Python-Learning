@@ -1,8 +1,11 @@
 class Car:
+    total_car_created = 0
+
     def __init__(self , name , brand , category):
         self.name = name 
         self.__brand = brand 
         self.category = category
+        Car.total_car_created += 1
     
     def get_brand(self):
         return f"{self.__brand}  ! " 
@@ -31,6 +34,8 @@ class Hybrid(Car):
 toyota = Hybrid("Toyota Innova" , "toyota" , "hybrid car")
 tesla = Electric_car("Tesla S Model" , "Tesla" , "Electric")
 sierra = Fuel_car("Tata Sierra" , "Tata" ,"Fuel car")
+sierra = Fuel_car("Tata Sierra" , "Tata" ,"Fuel car")
 print(toyota.recharging())
 print(tesla.recharging())
 print(sierra.recharging())
+print(Car.total_car_created)
